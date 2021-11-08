@@ -1,0 +1,15 @@
+header {
+  grid-area: header;
+  height: 5rem;
+  z-index: 2;
+}
+
+.logo-tmh {
+  max-width: 60px;
+  margin: 0.5rem;
+}
+
+.intro-tmh {
+  font-weight: 500;
+  font-size: 2.5rem;
+}

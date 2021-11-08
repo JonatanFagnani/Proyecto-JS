@@ -1,0 +1,25 @@
+/*Reset CSS & HTML*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: #eaeaea;
+  background-color: #001010;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8rem 1fr 1fr 8rem;
+  grid-template-areas:
+    "header"
+    "hero"
+    "article"
+    "footer";
+}

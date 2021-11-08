@@ -1,0 +1,63 @@
+/*HERO SECTION*/
+.hero {
+  grid-area: hero;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../assets/hero-img/bg-hero.png");
+  background-size: cover;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    width: 100%;
+    font-size: 10rem;
+    text-shadow: 10px black;
+    line-height: 0.9;
+    text-align: center;
+    margin: 5rem 2rem;
+  }
+  p {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 1.7;
+    margin: 0px 30px;
+  }
+  button {
+    align-self: center;
+    border-radius: 1rem;
+    margin: 30px 0px;
+    width: 350px;
+    height: 50px;
+    background-image: linear-gradient(20deg, #696961, #272725);
+    transition: width 0.5s;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 2.5rem;
+      padding: 1rem;
+    }
+  }
+}
+
+button:hover {
+  width: 400px;
+}
+
+@media screen and (max-width: 700px) {
+  .hero div h1 {
+    font-size: 5rem;
+  }
+  .hero div p {
+    font-size: 1.5rem;
+  }
+  .hero div a {
+    font-size: 1.6rem;
+  }
+}
