@@ -1,29 +1,51 @@
-function loginUser() {
-  let usuarioIngresado = prompt(
-    "Bienvenido a TheMusichub!\nIngrese su nombre de usuario:"
-  );
-  let usuario = usuarioIngresado.toLowerCase();
-  while (usuario != "emiliano") {
-    usuario = prompt("Usuario no encontrado.\nIntente nuevamente:");
+confirm("Bienvenido a TheMusicHub!\nVamos a crear tu usuario!");
+
+class User {
+  constructor(nombre, edad, mail) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.mail = mail;
+  }
+
+  mostrarDatos() {
+    alert("Usuario creado correctamente " + this.nombre + "!");
+  }
+  agregarAmigo() {
+    confirm("Tienes una solicitud de amistad de " + this.nombre + "!");
   }
 }
 
-function loginPassword() {
-  let passwordIngresada = prompt("Por favor, ingrese su contraseña:");
-  let password = passwordIngresada.toLowerCase();
-  if (password != "emiliano") {
-    password = prompt("Contraseña incorrecta.\nIntente nuevamente:");
-  } else {
-    alert("Has ingresado correctamente!.");
-  }
-}
+const user1 = new User(
+  prompt("Ingresa tu nombre de Usuario"),
+  prompt("Ingresa tu edad"),
+  prompt("Ingresa tu dirección de mail")
+);
 
-function mailUser() {
-  let usuarioIngresado = prompt(
-    "Mientras tanto, dejanos tu mail para informarte sobre las novedades.\nTu mail nunca sonó mejor:"
-  );
-}
+const user2 = new User("Jonatan", 32, "jlfagnani@hotmail.com");
 
-loginUser();
-loginPassword();
-mailUser();
+user1.mostrarDatos();
+user2.agregarAmigo();
+
+//Array Amigos
+
+const usuarios = ["Emiliano", "Jonatan", "Lucas", "Sabrina"];
+const amigos = usuarios.slice(1, 4);
+alert(`Tu lista de amigos se ha actualizado:\n${amigos.join("\n")}`);
+
+//Music Gender Profile
+
+let mainGender = prompt(
+  `Cual es tu genero musical favorito?\nPrueba eligiendo entre Rock - Pop - EDM - Indie.`
+);
+let mainGenderinput = mainGender.toLowerCase();
+if (mainGenderinput === "rock") {
+  alert(`Suena genial!, has elegido Rock.`);
+} else if (mainGenderinput === "pop") {
+  alert(`Suena genial!, has elegido Pop.`);
+} else if (mainGenderinput === "edm") {
+  alert(`Suena genial!, has elegido EDM.`);
+} else if (mainGenderinput === "indie") {
+  alert(`Suena genial!, has elegido Indie.`);
+} else {
+  alert(`Suena genial!, pero no esta entre las opciones\nIntenta nuevamente.`);
+}
