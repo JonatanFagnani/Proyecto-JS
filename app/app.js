@@ -27,7 +27,3 @@ function mailUser() {
 loginUser();
 loginPassword();
 mailUser();
-
-alert(
-  "Muy pronto vas a descubir algo nuevo e inspirador!, tus oidos lo agradeceran.\nNos vemos pronto!."
-);
