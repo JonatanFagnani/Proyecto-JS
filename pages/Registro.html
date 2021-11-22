@@ -13,16 +13,17 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
     </style>
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../app/app.js"></script>
     <title>Welcome! to TheMusicHub</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
+          <a class="navbar-brand" href="../index.html">
             <img
-              src="./assets/logo.png"
+              src="../assets/logo.png"
               class="img-fluid logo-tmh"
               alt="Logo"
             />
@@ -48,7 +49,7 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="./pages/Registro.html"
+                  href="./Registro.html"
                   >Registrarse</a
                 >
               </li>
@@ -65,23 +66,19 @@
     </header>
     <section class="hero">
       <div>
-        <h1>Welcome to the Music Hub!</h1>
-        <p>
-          Artistas, musicos, curadores, profesionales o por pura pasión, una
-          plataforma para todos y para cada uno. Ya sea para limpiar la casa,
-          encontrar tu proxima playlist favorita que inspire la mejor versión de
-          tu mismo y crear grandes cosas, aqui encontrarás todo y mucho más;
-          Conecta, iventiga, haz binge de tu proximo artista, genero o guilty
-          pleasure favorito!.
-        </p>
-        <button>
-          <a href="./pages/Registro.html">Me gusta como se oye eso!</a>
-        </button>
+        <h1>Se parte de la mejor parte!</h1>
+        <div>
+          <p>Ingresa tu Nombre:</p>
+          <input type="text" id="nombre" />
+          <p>Ingresa tu Mail:</p>
+          <input type="text" id="mail" />
+        </div>
+        <button onclick="mostrarDatos()"><a href=""> Registrarme</a></button>
       </div>
     </section>
     <main>
       <div>
-        <img src="./assets/hero-img/hero2.png" alt="Chica viendo discos" />
+        <img src="../assets/hero-img/hero2.png" alt="Chica viendo discos" />
       </div>
       <div>
         <h2>Donde vive la musica</h2>
@@ -94,13 +91,13 @@
     </main>
     <footer>
       <div class="logo-outro">
-        <img src="./assets/logo.png" alt="logo" />
+        <img src="../assets/logo.png" alt="logo" />
         <p>TheMusicHub</p>
       </div>
       <div class="redes">
-        <img src="./assets/redes/whatsapp.png" alt="whatsapp" />
-        <img src="./assets/redes/instagram.png" alt="instagram" />
-        <img src="./assets/redes/facebook.png" alt="facebook" />
+        <img src="../assets/redes/whatsapp.png" alt="whatsapp" />
+        <img src="../assets/redes/instagram.png" alt="instagram" />
+        <img src="../assets/redes/facebook.png" alt="facebook" />
       </div>
     </footer>
     <script
