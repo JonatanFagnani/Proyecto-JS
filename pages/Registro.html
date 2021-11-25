@@ -14,7 +14,12 @@
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
     </style>
     <link rel="stylesheet" href="../styles/style.css" />
-    <script src="../app/app.js"></script>
+    <link rel="shortcut icon" href="#">
+    <link rel="icon" href="../assets/logo.png">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Welcome! to TheMusicHub</title>
   </head>
   <body>
@@ -64,29 +69,70 @@
         </div>
       </nav>
     </header>
-    <section class="hero">
-      <div>
+    <section class="heroRegister">
+      <div class="datosUsuario">
         <h1>Se parte de la mejor parte!</h1>
         <div>
-          <p>Ingresa tu Nombre:</p>
-          <input type="text" id="nombre" />
-          <p>Ingresa tu Mail:</p>
-          <input type="text" id="mail" />
+          <input type="text" placeholder="Ingresa tu Nombre" id="nombre" />
+          <input type="text" placeholder="Ingresa tu Mail" id="mail" />
+          <p>Que te suena más?</p>
+          <select class="" name="genderFav">
+            <option></option>
+            <option>Pop</option>
+            <option>Rock</option>
+            <option>Indie</option>
+            <option>EDM</option>
+            <option>Soul</option>
+            <option>Trending</option>
+            </select>
         </div>
         <button onclick="mostrarDatos()"><a href=""> Registrarme</a></button>
       </div>
     </section>
     <main>
-      <div>
-        <img src="../assets/hero-img/hero2.png" alt="Chica viendo discos" />
+      <div class="music-discover">
+        <div>
+          <h2>Something New...</h2>
+          <iframe src="https://open.spotify.com/embed/track/1lrxKnhETdtGBk5BecESRD?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div>
+          <h2>...& Something Old.</h2>
+          <iframe src="https://open.spotify.com/embed/track/0qUnBLZ8bJqUNEeQgayL9t?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
       </div>
-      <div>
-        <h2>Donde vive la musica</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-          quisquam dolorem facere accusantium, magnam hic voluptatibus
-          temporibus dolor explicabo voluptates.
-        </p>
+      <div class="cont-reproductor">
+      <div class="reproductor">
+        <h2>New Songs on the Block!</h2>
+        <div class="listado-canciones">
+          <div class="cancion">
+            <div class="titulo">Fell the Beats - Dubstep</div>
+            <div class="play" id="dubstep">
+              <span class="material-icons"> play_circle </span>
+            </div>
+            <div class="stop">
+              <span class="material-icons"> cancel </span>
+            </div>
+          </div>
+          <div class="cancion">
+            <div class="titulo">Acoustic Breeze - Relax</div>
+            <div class="play" id="acousticbreeze">
+              <span class="material-icons"> play_circle </span>
+            </div>
+            <div class="stop">
+              <span class="material-icons"> cancel </span>
+            </div>
+          </div>
+          <div class="cancion">
+            <div class="titulo">A Great Time! - Good Vibes</div>
+            <div class="play" id="punky">
+              <span class="material-icons"> play_circle </span>
+            </div>
+            <div class="stop">
+              <span class="material-icons"> cancel </span>
+            </div>
+          </div>
+        </div>
+        <input type="range" max="1" min="0" step="0.1" class="volumen" />
       </div>
     </main>
     <footer>
@@ -105,5 +151,7 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="../app/app.js"></script>
+
   </body>
 </html>

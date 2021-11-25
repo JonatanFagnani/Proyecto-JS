@@ -1,12 +1,12 @@
 /*HERO SECTION*/
-.hero {
+.heroRegister {
   grid-area: hero;
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../assets/hero-img/bg-hero.png");
+  background-image: url("../assets/hero-img/hero1.png");
   background-size: cover;
   div {
     display: flex;
@@ -21,7 +21,7 @@
     line-height: 0.9;
     text-align: center;
     margin: 5rem 2rem;
-    border: black;
+    text-shadow: black;
   }
   p {
     text-align: center;
@@ -62,4 +62,47 @@ button:hover {
   .hero div a {
     font-size: 1.6rem;
   }
+}
+
+//reproductor de musica
+
+.reproductor {
+  width: 30rem;
+  height: 100%;
+  margin: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.listado-canciones {
+  width: 100%;
+}
+.cancion {
+  padding: 1rem 0rem;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.titulo {
+  flex: 6;
+}
+.play,
+.stop,
+.descargar {
+  flex: 1;
+  cursor: pointer;
+}
+
+.cont-reproductor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-discover {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

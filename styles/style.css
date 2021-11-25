@@ -16,18 +16,21 @@ body {
   font-size: 1.6rem;
   color: #eaeaea;
   background-color: #001010;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 8rem 1fr 1fr 8rem;
-      grid-template-rows: 8rem 1fr 1fr 8rem;
-      grid-template-areas: "header" "hero" "article" "footer";
+}
+
+input,
+select {
+  outline: none;
+  border: none;
+  margin: 1rem;
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: silver;
 }
 
 header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: header;
   height: 5rem;
   z-index: 2;
@@ -45,8 +48,6 @@ header {
 
 /*HERO SECTION*/
 .hero {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: hero;
   height: 100vh;
   width: 100%;
@@ -86,6 +87,7 @@ header {
   line-height: 0.9;
   text-align: center;
   margin: 5rem 2rem;
+  border: black;
 }
 
 .hero p {
@@ -100,11 +102,13 @@ header {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  border-radius: 1rem;
+  border-radius: 2rem;
   margin: 30px 0px;
   width: 350px;
-  height: 50px;
-  background-image: linear-gradient(20deg, #696961, #272725);
+  height: 70px;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6c5ce7), to(#c23b7c));
+  background-image: linear-gradient(to right, #6c5ce7, #c23b7c);
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
 }
@@ -134,22 +138,12 @@ button:hover {
 
 main {
   height: 100%;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: article;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0rem 10rem;
 }
 
 main img {
-  max-width: 100%;
+  height: 500px;
 }
 
 main h2 {
@@ -173,10 +167,31 @@ main p {
   }
 }
 
+.girl-record {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.music-desciption {
+  width: 50rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.music-desciption2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
 /*FOOTER START*/
 footer {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: footer;
   background: #191c1f;
   display: -webkit-box;
@@ -216,9 +231,174 @@ footer .logo-outro p {
 }
 
 footer .redes img {
-  max-width: 45px;
-  margin-right: 1rem;
+  max-width: 35px;
+  margin-right: 2rem;
 }
 
-/*SERVICIOS*/
+/*REGISTER PAGE*/
+/*HERO SECTION*/
+.heroRegister {
+  grid-area: hero;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../assets/hero-img/hero1.png");
+  background-size: cover;
+}
+
+.heroRegister div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heroRegister h1 {
+  width: 100%;
+  font-size: 10rem;
+  text-shadow: 10px black;
+  line-height: 0.9;
+  text-align: center;
+  margin: 5rem 2rem;
+  text-shadow: black;
+}
+
+.heroRegister p {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0px 10rem;
+}
+
+.heroRegister button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 2rem;
+  margin: 30px 0px;
+  width: 350px;
+  height: 70px;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6c5ce7), to(#c23b7c));
+  background-image: linear-gradient(to right, #6c5ce7, #c23b7c);
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.heroRegister button a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+button:hover {
+  width: 400px;
+}
+
+@media screen and (max-width: 700px) {
+  .hero div h1 {
+    font-size: 5rem;
+  }
+  .hero div p {
+    font-size: 1.5rem;
+  }
+  .hero div a {
+    font-size: 1.6rem;
+  }
+}
+
+.reproductor {
+  width: 30rem;
+  height: 100%;
+  margin: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.listado-canciones {
+  width: 100%;
+}
+
+.cancion {
+  padding: 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.titulo {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
+.play,
+.stop,
+.descargar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  cursor: pointer;
+}
+
+.cont-reproductor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.music-discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */
