@@ -52,8 +52,8 @@
 
 //Se reemplaza prompt con inputs en HTML
 function mostrarDatos() {
-  nombre = document.getElementById("nombre").value;
-  mail = document.getElementById("mail").value;
+  let nombre = document.getElementById("nombre").value;
+  let mail = document.getElementById("mail").value;
   if (nombre === "") {
     alert(`Completa todos los campos.`);
   } else
@@ -61,6 +61,12 @@ function mostrarDatos() {
       `Te has registrado correctamente ${nombre}!\nTe enviamos un mail a ${mail}. `
     );
 }
+
+//Credito copy
+
+let parrafo = document.createElement("p");
+parrafo.innerHTML = "Music from Bensound.com";
+document.body.appendChild(parrafo);
 
 //Canciones a reproducir
 
@@ -88,3 +94,27 @@ volumen.addEventListener("click", function () {
   let vol = this.value;
   audio.volume = vol;
 });
+
+// Variables
+// const songs = [
+//   {
+//     id: 1,
+//     name: "Slide Away - Miley Cyrus",
+//     link: (
+//       <iframe
+//         src="https://open.spotify.com/embed/track/44ADyYoY5liaRa3EOAl4uf?utm_source=generator&theme=0"
+//         width="100%"
+//         height="80"
+//         frameBorder="0"
+//         allowfullscreen=""
+//         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+//       ></iframe>
+//     ),
+//   }
+// ];
+
+// function showSong() {
+//   songs.forEach((song) => {
+//     const div = document.createElement("div");
+//   });
+// }
